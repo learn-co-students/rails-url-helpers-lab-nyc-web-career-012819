@@ -1,11 +1,21 @@
 class StudentsController < ApplicationController
   before_action :set_student, only: :show
-  
+
   def index
     @students = Student.all
   end
 
   def show
+    @student.active ? @student_status = "active" : @student_status = "inactive"
+    @student = Student.find(params[:id])
+  end
+
+  def activate
+    #code
+    @student = Student.find(params[:id])
+    @student.active = !@student.active
+    @student.save
+    redirect_to student_path(@student)
   end
 
   private
