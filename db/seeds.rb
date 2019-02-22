@@ -4,4 +4,14 @@
 # Examples:
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#   M
+
+s1 = Student.create([{first_name: 'lola', last_name: 'bola'}])
+s2 = Student.create([{first_name: 'jeff', last_name: 'davies'}])
+
+
+# t.string :first_name
+# t.string :last_name
+# t.boolean :active, default: false
+#a
+# t.timestamps null: false
