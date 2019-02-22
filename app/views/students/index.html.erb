@@ -1,5 +1,9 @@
 <div>
   <% @students.each do |student| %>
-    <div><%= student.first_name + " " + student.last_name %></div>
+    <div><%= link_to student.to_s, student_path(student) %></div>
   <% end %>
 </div>
+<!-- when do we use student's'_path and student_path ? -->
+<!-- I changed get "students/:id", to: "students#show"
+      to resources :students, only: [:index, :show]
+      then it went over to the show page, before it didn't. why?-->
